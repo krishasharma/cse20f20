@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+#-------------------------------------------------------------------
+#  TestBox
+#-------------------------------------------------------------------
+date +%s.%N       > TestBoxOut
+echo $PATH       >> TestBoxOut
+ls | tr "\n" " " >> TestBoxOut 
+echo             >> TestBoxOut
+pwd              >> TestBoxOut
+ls ~/bin/Box     >> TestBoxOut 2>&1
+ls ~/bin/Dog     >> TestBoxOut 2>&1
+ls ~/bin/Echo    >> TestBoxOut 2>&1
+Box 3 20         >> TestBoxOut 2>&1
+Box 3 2          >> TestBoxOut 2>&1
+Box 4 4          >> TestBoxOut 2>&1
+date +%s.%N      >> TestBoxOut
+
+

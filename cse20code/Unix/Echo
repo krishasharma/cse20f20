@@ -1,0 +1,12 @@
+#!/usr/local/bin/python3
+#----------------------------------------------------------------------
+#  Echo
+#  Emulates Unix echo command by printing command line arguments
+#----------------------------------------------------------------------
+import sys
+for w in sys.argv[1:]:
+   print(w, end=' ')
+# end for
+print()
+
+# end program ---------------------------------------------------------
